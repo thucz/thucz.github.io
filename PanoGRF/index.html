@@ -32,13 +32,40 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+  .flex{display: flex;}
+  figure {
+    display: table;
+    width: 50%;
+    margin:0.1%;
+  }
+
+  figcaption {
+    display: table-caption;
+    caption-side: top;
+  }
+
+  #content {
+    max-width: 80%;
+    height: 80%;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+  }
+  </style>
+  
 </head>
 <body>
 
@@ -157,7 +184,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code(Comming Soon)</span>
+                  <span>Code(Coming Soon)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
@@ -260,7 +287,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
+          <!-- <p>
             We present the first method capable of photorealistically reconstructing a non-rigidly
             deforming scene using photos/videos captured casually from mobile phones.
           </p>
@@ -286,9 +313,9 @@
             images of the same pose at different viewpoints. We show that our method faithfully
             reconstructs non-rigidly deforming scenes and reproduces unseen views with high
             fidelity.
-          </p>
+          </p> -->
           <p>
-            Achieving an immersive experience enabling users to explore virtual environments with six degrees of freedom (6DoF) is essential for various applications such as virtual reality (VR). Wide-baseline panoramas are commonly used in these applications to reduce network bandwidth and storage requirements. However, synthesizing novel views from these panoramas remains a key challenge. Although existing neural radiance field methods can produce photorealistic views under narrow-baseline and dense image captures, they tend to overfit the training views when dealing with wide-baseline panoramas due to the difficulty in learning accurate geometry from sparse 360^degree views. To address this problem, we propose PanoGRF, Generalizable Spherical Radiance Fields for Wide-baseline Panoramas, which construct spherical radiance fields incorporating 360^degree scene priors. Unlike generalizable radiance fields trained on perspective images, PanoGRF avoids the information loss from panorama-to-perspective conversion and directly aggregates geometry and appearance features of 3D sample points from each panoramic view based on spherical projection. Moreover, as some regions of the panorama are only visible from one view while invisible from others under wide baseline settings, PanoGRF incorporates 360^degree monocular depth priors into spherical depth estimation to improve the geometry features. Experimental results on multiple panoramic datasets demonstrate that PanoGRF significantly outperforms state-of-the-art generalizable view synthesis methods for wide-baseline panoramas (e.g., OmniSyn) and perspective images (e.g., IBRNet, NeuRay).
+            Achieving an immersive experience enabling users to explore virtual environments with six degrees of freedom (6DoF) is essential for various applications such as virtual reality (VR). Wide-baseline panoramas are commonly used in these applications to reduce network bandwidth and storage requirements. However, synthesizing novel views from these panoramas remains a key challenge. Although existing neural radiance field methods can produce photorealistic views under narrow-baseline and dense image captures, they tend to overfit the training views when dealing with wide-baseline panoramas due to the difficulty in learning accurate geometry from sparse 360&deg; views. To address this problem, we propose PanoGRF, Generalizable Spherical Radiance Fields for Wide-baseline Panoramas, which construct spherical radiance fields incorporating 360&deg; scene priors. Unlike generalizable radiance fields trained on perspective images, PanoGRF avoids the information loss from panorama-to-perspective conversion and directly aggregates geometry and appearance features of 3D sample points from each panoramic view based on spherical projection. Moreover, as some regions of the panorama are only visible from one view while invisible from others under wide baseline settings, PanoGRF incorporates 360&deg; monocular depth priors into spherical depth estimation to improve the geometry features. Experimental results on multiple panoramic datasets demonstrate that PanoGRF significantly outperforms state-of-the-art generalizable view synthesis methods for wide-baseline panoramas (e.g., OmniSyn) and perspective images (e.g., IBRNet, NeuRay).
           </p>
         </div>
       </div>
@@ -314,93 +341,224 @@
   <div class="container is-max-desktop">
     
 
-    <!-- <div class="columns is-centered">
+    <div class="columns is-centered">
 
       <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Rendering Panoramas</h2>
-          <div class="image"></div><br />
-          <div>
-            <img src="static/gifs/cmp_with_nerf/snerf_1.gif">
-          </div>
+        <!-- <div class="content"> -->
+          <div id="content" class="center">            
+            <h2 class="title is-3">Comparisons with Spherical NeRF</h2>
 
-        </div>
+            <div class="flex">
+
+              <figure >
+                <img src="static/gifs/cmp_with_nerf/snerf_2.gif"
+                  alt="snerf">            
+                <figcaption style="text-align:center">Spherical NeRF</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_nerf/ours_2.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">Ours </figcaption>
+              </figure>
+            </div>
+
+            <div class="flex">
+
+              <figure >
+                <img src="static/gifs/cmp_with_nerf/snerf_6.gif"
+                  alt="snerf">            
+                <figcaption style="text-align:center">Spherical NeRF</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_nerf/ours_6.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">Ours </figcaption>
+              </figure>
+            </div>
+            
+            <div class="flex">
+
+              <figure >
+                <img src="static/gifs/cmp_with_nerf/snerf_15.gif"
+                  alt="snerf">            
+                <figcaption style="text-align:center">Spherical NeRF</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_nerf/ours_15.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">Ours </figcaption>
+              </figure>
+            </div>            
+
+            <h2 class="title is-3">Comparisons with Generalizable Methods</h2>
+            <div class="flex">
+
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/omnisyn/1.gif"
+                  alt="snerf">            
+                <figcaption style="text-align:center">OmniSyn</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ibrnet/1.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">IBRNet </figcaption>
+              </figure>
+              
+              <!-- <p>\br </p> -->
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/neuray/1.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">NeuRay</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ours/1.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">Ours</figcaption>
+              </figure>
+            </div>   
+
+            <div class="flex">
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/omnisyn/2.gif"
+                  alt="snerf">            
+                <figcaption style="text-align:center">OmniSyn</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ibrnet/2.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">IBRNet </figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/neuray/2.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">NeuRay</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ours/2.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">Ours</figcaption>
+              </figure>
+            </div>   
+
+            <div class="flex">
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/omnisyn/4.gif"
+                  alt="snerf">            
+                <figcaption style="text-align:center">OmniSyn</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ibrnet/4.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">IBRNet </figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/neuray/4.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">NeuRay</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ours/4.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">Ours</figcaption>
+              </figure>
+            </div>   
+            
+            <div class="flex">
+
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/omnisyn/6.gif"
+                  alt="snerf">            
+                <figcaption style="text-align:center">OmniSyn</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ibrnet/6.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">IBRNet </figcaption>
+              </figure>              
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/neuray/6.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">NeuRay</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ours/6.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">Ours</figcaption>
+              </figure>
+
+              
+            </div>   
+
+            <div class="flex">
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/omnisyn/15.gif"
+                  alt="snerf">            
+                <figcaption style="text-align:center">OmniSyn</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ibrnet/15.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">IBRNet </figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/neuray/15.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">NeuRay</figcaption>
+              </figure>
+              <figure >
+                <img src="static/gifs/cmp_with_baselines/ours/15.gif"
+                      alt="ours">            
+                <figcaption style="text-align:center">Ours</figcaption>
+              </figure>
+            </div>   
+
+          </div>
+        <!-- </div> -->
+
       </div>
+    </div>
+
+    <!-- <div id="content" class="center">
+      <div class="flex">
+        <figure >
+          <img src="static/gifs/cmp_with_nerf/snerf_2.gif"
+                 alt="snerf">            
+         <figcaption style="text-align:center">SNeRF </figcaption>
+        </figure>
+        <figure >
+          <img src="static/gifs/cmp_with_nerf/ours_2.gif"
+                 alt="ours">            
+
+          <figcaption style="text-align:center">ours </figcaption>
+        </figure>
+        <figure >
+          <img src="static/gifs/cmp_with_nerf/ours_2.gif"
+                 alt="ours">            
+
+          <figcaption style="text-align:center">ours </figcaption>
+        </figure>
+        <figure >
+          <img src="static/gifs/cmp_with_nerf/ours_2.gif"
+                 alt="ours">            
+
+          <figcaption style="text-align:center">ours </figcaption>
+        </figure>
+      </div>
+  
     </div> -->
-    <div class="image"></div><br />
+
+    
+
+
+    <!-- <div class="image"></div><br />
     <div>
       <img src="static/gifs/cmp_with_nerf/snerf_1.gif">
-    </div>
+    </div> -->
 
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -423,13 +581,13 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
   </div>
 </section>
 
-
+<!-- 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -440,12 +598,12 @@
   year      = {2021},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
+    <!-- <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
@@ -453,10 +611,15 @@
       <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
+          <p>
+            The website template was borrowed from <a href="https://nerfies.github.io/">https://nerfies.github.io/</a> and is licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+          </p>
+
+<!--           
           <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
@@ -468,7 +631,7 @@
             we just ask that you link back to this page in the footer.
             Please remember to remove the analytics code included in the header of the website which
             you do not want on your website.
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
