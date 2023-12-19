@@ -250,32 +250,20 @@
               </div>
           </div>
       </div>
-      <!--/ Paper video. -->
+      <!-- / Paper video. -->
 
-      <!-- Abstract.
+      Abstract.
       <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
               <h2 class="title is-3">Abstract</h2>
               <div class="content has-text-justified">
                   <p>
-                      Novel view synthesis from a single image has been a
-                      cornerstone problem for many Virtual Reality applications
-                      that provide immersive experiences. However, most existing
-                      techniques can only synthesize novel views within a
-                      limited range of camera motion or fail to generate consistent
-                      and high-quality novel views under significant camera
-                      movement. In this work, we propose a pose-guided diffusion
-                      model to generate a consistent long-term video of novel
-                      views from a single image. We design an attention layer that
-                      uses epipolar lines as constraints to facilitate the association
-                      between different viewpoints. Experimental results on
-                      synthetic and real-world datasets demonstrate the effectiveness
-                      of the proposed diffusion model against state-of-the-art
-                      transformer-based and GAN-based approaches.
+                    Achieving an immersive experience enabling users to explore virtual environments with six degrees of freedom (6DoF) is essential for various applications such as virtual reality (VR). Wide-baseline panoramas are commonly used in these applications to reduce network bandwidth and storage requirements. However, synthesizing novel views from these panoramas remains a key challenge. Although existing neural radiance field methods can produce photorealistic views under narrow-baseline and dense image captures, they tend to overfit the training views when dealing with wide-baseline panoramas due to the difficulty in learning accurate geometry from sparse 360&deg; views. To address this problem, we propose PanoGRF, Generalizable Spherical Radiance Fields for Wide-baseline Panoramas, which construct spherical radiance fields incorporating 360&deg; scene priors. Unlike generalizable radiance fields trained on perspective images, PanoGRF avoids the information loss from panorama-to-perspective conversion and directly aggregates geometry and appearance features of 3D sample points from each panoramic view based on spherical projection. Moreover, as some regions of the panorama are only visible from one view while invisible from others under wide baseline settings, PanoGRF incorporates 360&deg; monocular depth priors into spherical depth estimation to improve the geometry features. Experimental results on multiple panoramic datasets demonstrate that PanoGRF significantly outperforms state-of-the-art generalizable view synthesis methods for wide-baseline panoramas (e.g., OmniSyn) and perspective images (e.g., IBRNet, NeuRay).
+          
                   </p>
               </div>
           </div>
-      </div> -->
+      </div>
       <!--/ Abstract. -->
   </div>
 </section>
@@ -338,62 +326,6 @@
   </div>
 </section> -->
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p> -->
-          <p>
-            Achieving an immersive experience enabling users to explore virtual environments with six degrees of freedom (6DoF) is essential for various applications such as virtual reality (VR). Wide-baseline panoramas are commonly used in these applications to reduce network bandwidth and storage requirements. However, synthesizing novel views from these panoramas remains a key challenge. Although existing neural radiance field methods can produce photorealistic views under narrow-baseline and dense image captures, they tend to overfit the training views when dealing with wide-baseline panoramas due to the difficulty in learning accurate geometry from sparse 360&deg; views. To address this problem, we propose PanoGRF, Generalizable Spherical Radiance Fields for Wide-baseline Panoramas, which construct spherical radiance fields incorporating 360&deg; scene priors. Unlike generalizable radiance fields trained on perspective images, PanoGRF avoids the information loss from panorama-to-perspective conversion and directly aggregates geometry and appearance features of 3D sample points from each panoramic view based on spherical projection. Moreover, as some regions of the panorama are only visible from one view while invisible from others under wide baseline settings, PanoGRF incorporates 360&deg; monocular depth priors into spherical depth estimation to improve the geometry features. Experimental results on multiple panoramic datasets demonstrate that PanoGRF significantly outperforms state-of-the-art generalizable view synthesis methods for wide-baseline panoramas (e.g., OmniSyn) and perspective images (e.g., IBRNet, NeuRay).
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
-  </div>
-</section>
 
 
 
