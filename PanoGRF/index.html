@@ -221,7 +221,61 @@
     </div>
   </div>
 </section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Achieving an immersive experience enabling users to explore virtual environments with six degrees of freedom (6DoF) is essential for various applications such as virtual reality (VR). Wide-baseline panoramas are commonly used in these applications to reduce network bandwidth and storage requirements. However, synthesizing novel views from these panoramas remains a key challenge. Although existing neural radiance field methods can produce photorealistic views under narrow-baseline and dense image captures, they tend to overfit the training views when dealing with wide-baseline panoramas due to the difficulty in learning accurate geometry from sparse $360^{\circ}$ views. To address this problem, we propose PanoGRF, Generalizable Spherical Radiance Fields for Wide-baseline Panoramas, which construct spherical radiance fields incorporating $360^{\circ}$ scene priors. Unlike generalizable radiance fields trained on perspective images, PanoGRF avoids the information loss from panorama-to-perspective conversion and directly aggregates geometry and appearance features of 3D sample points from each panoramic view based on spherical projection. Moreover, as some regions of the panorama are only visible from one view while invisible from others under wide baseline settings, PanoGRF incorporates $360^{\circ}$ monocular depth priors into spherical depth estimation to improve the geometry features. Experimental results on multiple panoramic datasets demonstrate that PanoGRF significantly outperforms state-of-the-art generalizable view synthesis methods for wide-baseline panoramas (e.g., OmniSyn) and perspective images (e.g., IBRNet, NeuRay).
+          </p>
+          <!-- <p>
+            Our approach augments neural radiance fields
+            (NeRF) by optimizing an
+            additional continuous volumetric deformation field that warps each observed point into a
+            canonical 5D NeRF.
+            We observe that these NeRF-like deformation fields are prone to local minima, and
+            propose a coarse-to-fine optimization method for coordinate-based models that allows for
+            more robust optimization.
+            By adapting principles from geometry processing and physical simulation to NeRF-like
+            models, we propose an elastic regularization of the deformation field that further
+            improves robustness.
+          </p>
+          <p>
+            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
+            photos/videos into deformable NeRF
+            models that allow for photorealistic renderings of the subject from arbitrary
+            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
+            using a
+            rig with two mobile phones that take time-synchronized photos, yielding train/validation
+            images of the same pose at different viewpoints. We show that our method faithfully
+            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
+            fidelity.
+          </p> -->
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
 
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+        
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/OYojEm8w7GA?si=wCxSrJDivM4TJQu1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
 <!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -237,36 +291,16 @@
     </div>
   </div>
 </section> -->
-<section class="section" style="padding-top: 20px;">
-  <div class="container is-max-desktop">
 
-      <!-- Paper video. -->
-      <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-              <h2 class="title is-3">Video</h2>
-              <div class="publication-video">
-                  <iframe src="https://youtu.be/OYojEm8w7GA" frameborder="0" allow="autoplay; encrypted-media"
+        <!-- <center><h1>Supplementary Video</h1></center>
+        <p align="center">
+				<iframe width="660" height="395" src="https://www.youtube.com/embed/qz2yX8TIzDk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen align="center"></iframe></p> -->
+                <!-- <iframe src="https://youtu.be/OYojEm8w7GA" frameborder="0" allow="autoplay; encrypted-media"
                       allowfullscreen></iframe>
-              </div>
-          </div>
-      </div>
-      <!-- / Paper video. -->
-
-      Abstract.
-      <div class="columns is-centered has-text-centered">
-          <div class="column is-four-fifths">
-              <h2 class="title is-3">Abstract</h2>
-              <div class="content has-text-justified">
-                  <p>
+  
                     Achieving an immersive experience enabling users to explore virtual environments with six degrees of freedom (6DoF) is essential for various applications such as virtual reality (VR). Wide-baseline panoramas are commonly used in these applications to reduce network bandwidth and storage requirements. However, synthesizing novel views from these panoramas remains a key challenge. Although existing neural radiance field methods can produce photorealistic views under narrow-baseline and dense image captures, they tend to overfit the training views when dealing with wide-baseline panoramas due to the difficulty in learning accurate geometry from sparse 360&deg; views. To address this problem, we propose PanoGRF, Generalizable Spherical Radiance Fields for Wide-baseline Panoramas, which construct spherical radiance fields incorporating 360&deg; scene priors. Unlike generalizable radiance fields trained on perspective images, PanoGRF avoids the information loss from panorama-to-perspective conversion and directly aggregates geometry and appearance features of 3D sample points from each panoramic view based on spherical projection. Moreover, as some regions of the panorama are only visible from one view while invisible from others under wide baseline settings, PanoGRF incorporates 360&deg; monocular depth priors into spherical depth estimation to improve the geometry features. Experimental results on multiple panoramic datasets demonstrate that PanoGRF significantly outperforms state-of-the-art generalizable view synthesis methods for wide-baseline panoramas (e.g., OmniSyn) and perspective images (e.g., IBRNet, NeuRay).
+           -->
           
-                  </p>
-              </div>
-          </div>
-      </div>
-      <!--/ Abstract. -->
-  </div>
-</section>
 
 
 <!-- <section class="hero is-light is-small">
@@ -584,19 +618,18 @@
   </div>
 </section>
 
-<!-- 
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@article{chen2023panogrf,
+      title={PanoGRF: Generalizable Spherical Radiance Fields for Wide-baseline Panoramas},
+      author={Chen, Zheng and Cao, Yan-Pei and Guo, Yuan-Chen and Wang, Chen and Shan, Ying and Zhang, Song-Hai},
+      journal={arXiv preprint arXiv:2306.01531},
+      year={2023}
+    }</code></pre>
   </div>
-</section> -->
-
+</section>
 
 <footer class="footer">
   <div class="container">
